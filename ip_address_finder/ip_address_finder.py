@@ -13,8 +13,8 @@ def getIPAddresses(fileName):
 
 ipAddressList = []
 
-fileName = input('Enter the name of the file you wish to search for IP Addresses: ')
+fileName = input('Enter the name of the file/path you wish to search for IP Addresses: ')
 
 getIPAddresses(fileName)
 
-print(ipAddressList
+print(ipAddressList)
