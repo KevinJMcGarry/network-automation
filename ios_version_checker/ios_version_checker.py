@@ -24,7 +24,7 @@ getIPAddresses(file_name)
 username = input('Username: ')
 password = getpass()
 
-with open('results.csv', 'w') as inputFile2:
+with open('results.csv', 'a') as inputFile2:
     for ipaddress in ipAddressList:
         print('Connecting to device at {}'.format(ipaddress))
         net_connect = make_connection(ipaddress, username, password)
