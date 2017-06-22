@@ -34,6 +34,6 @@ with open('results.csv', 'a') as inputFile2:
             if ".bin" in each_word:
                 print(each_word)
                 version = each_word
-                results = ipaddress + ", " + version
+                results = ipaddress + ", " + version + ", " + "\n"
                 print(results)
         inputFile2.write(results)
