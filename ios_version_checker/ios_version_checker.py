@@ -29,11 +29,9 @@ with open('results.csv', 'a') as inputFile2:
         print('Connecting to device at {}'.format(ipaddress))
         net_connect = make_connection(ipaddress, username, password)
         output = net_connect.send_command_expect('show ver | i .bin')
-        print(output)
         for each_word in output.split(" "):
             if ".bin" in each_word:
-                print(each_word)
                 version = each_word
                 results = ipaddress + ", " + version + ", " + "\n"
-                print(results)
+                print('Writing ' + results.strip("\n") + 'to the file results.csv')
         inputFile2.write(results)
