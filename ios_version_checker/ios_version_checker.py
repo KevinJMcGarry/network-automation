@@ -20,8 +20,6 @@ ipAddressList = []
 file_name = input('Enter the name of the file you want to search for IP Addresses: ')
 getIPAddresses(file_name)
 
-# print(ipAddressList)
-
 # prompt for username and password to log into devices
 username = input('Username: ')
 password = getpass()
