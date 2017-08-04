@@ -8,12 +8,12 @@ ipAddressList2 = []
 
 
 import os, re
-os.chdir('../../Downloads')
+os.chdir('../../Downloads')  # change to appropriate folder or enter full path when opening
 print(os.getcwd())
-with open('./pathToFile', 'r') as inputfile:
+with open('./fankey.log', 'r') as inputfile:  # adjust name accordingly
     for line in inputfile:
         foundIPs = re.findall(r'(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)', line)
-        ipAddressList.extend(foundIPs)
+        ipAddressList.extend(foundIPs)  # extending the list with each ip found. append would add list inside of the list.
 
 print(ipAddressList)
 
@@ -27,4 +27,4 @@ for element in ipAddressList:
 print(ipAddressDict)
 for k,v in ipAddressDict.items():
     ipAddressList2.append((v,k))
-print(ipAddressList2.sort())
+print(ipAddressList2.sort())  # sorted list of ip addresses in descending order
