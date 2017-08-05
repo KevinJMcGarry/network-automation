@@ -2,12 +2,12 @@
 quick script (not using functions) to create a sorted list of ip addresses used in a file
 ''' 
 
+import os, re
+
 ipAddressList = []
 ipAddressDict = {}
 ipAddressList2 = []
 
-
-import os, re
 os.chdir('../../Downloads')  # change to appropriate folder or enter full path when opening
 print(os.getcwd())
 with open('./fankey.log', 'r') as inputfile:  # adjust name accordingly
