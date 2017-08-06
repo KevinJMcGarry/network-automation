@@ -15,7 +15,7 @@ with open('./fankey.log', 'r') as inputfile:  # adjust name accordingly
         foundIPs = re.findall(r'(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)', line)
         ipAddressList.extend(foundIPs)  # extending the list with each ip found. append would add list inside of the list.
 
-print(ipAddressList)
+# print(ipAddressList)
 
 
 for element in ipAddressList:
