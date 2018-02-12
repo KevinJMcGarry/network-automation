@@ -1,4 +1,4 @@
-# Function for carving ip addresses out of a file.
+# Functions for carving ip addresses out of a file.
 
 import re
 
@@ -9,12 +9,15 @@ def getIPAddresses(fileName):
     with open(fileName, 'r') as inputFile:
         for line in inputFile:
             found_ips = IPAddressCarver(line)
-            ipAddressList.append(found_ips)
+            ipAddressList.extend(found_ips)
 
-ipAddressList = []
 
-fileName = input('Enter the name of the file/path you wish to search for IP Addresses: ')
+if __name__ == '__main__':
+    fileName = input('Enter the name of the file/path you wish to search for IP Addresses: ')
+    ipAddressList = []
+    getIPAddresses(fileName)
+    print(ipAddressList)
 
-getIPAddresses(fileName)
 
-print(ipAddressList)
+# todo - add arguments for running from command line
+# write output to file and output the location/name of file
